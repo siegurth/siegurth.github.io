@@ -1,0 +1,51 @@
+@import "_mixins";
+@import '_variables';
+
+footer {
+	padding: 0 20px;
+	height: auto;
+	overflow: hidden;
+	p {
+		font-family: 'Roboto', sans-serif;
+		font-size: 14px;
+		line-height: 28px;
+		&.contact-info {
+			float: left;
+			width: 65%;
+		}
+		&.rights {
+			width: 100%;
+			float: left;
+		}
+	}
+	div {
+		float: right;
+		text-align: right;
+		width: 35%;
+		.socials {
+			float: right;
+			li {
+				float: left;
+				&+li {
+					margin-left: 20px;
+				}
+				a {
+					font-family: 'Roboto', sans-serif;
+					font-size: 14px;
+					line-height: 28px;
+					text-transform: capitalize;
+					&:hover {
+						text-decoration: underline;
+					}
+					&.instagram {
+						color: #c536a5;
+					}
+					&.facebook {
+						color: #475993;
+					}
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,129 @@
+@import "_mixins";
+@import '_variables';
+
+main {
+	padding-top: 250px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	section {
+		max-width: 1500px;
+	}
+	article {
+		width: 100%;
+		.slogan {
+			height: auto;
+			width: 100%;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+		 	flex-flow: row wrap;
+			div {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				justify-content: center;
+				flex-grow: 1;
+				&:first-child {
+					flex-direction: column;
+					align-items: left;
+				}
+				h3 {
+					font-family: 'Roboto', sans-serif;
+					font-weight: 700;
+					font-size: 78px;
+					line-height: 60px;
+				}
+				p {
+					font-family: 'Roboto', sans-serif;
+					font-size: 40px;
+					line-height: 60px;
+					margin: 10px 0;
+				}
+				img {
+					@include img(80%, 80%);
+				}
+			}
+		}
+		&.adv {
+			width: 100%;
+			.row {
+				width: 100%;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				 justify-content: space-around;
+				 img {
+				 	@include img(auto);
+				 }
+				& + .row {
+					margin-top: 0.5vh;
+				}
+			}
+		}
+		&.description {
+			text-align: center;
+			padding: 120px 0;
+			p {
+				font-family: 'Roboto', sans-serif;
+				font-size: 20px;
+				line-height: 36px;
+				text-align: center;
+				margin-top: 40px;
+			}
+			a {
+				display: inline-block;
+				&.purchase {
+					font-family: 'Roboto', sans-serif;
+					font-size: 15px;
+					line-height: 60px;
+					padding: 0 65px;
+					border-radius: 30px;
+					color: #fff;
+					background-color: rgb(64, 211, 173);
+					transform: translateY(40px);
+				}
+			}
+		}
+		&.portfolio {
+			text-align: center;
+			padding-bottom: 170px;
+			.signature {
+				font-family: 'Roboto', sans-serif;
+				font-size: 15px;
+				line-height: 60px;
+				text-transform: uppercase;
+				span {
+					color: #c536a5;
+				}
+			}
+			.gallery {
+				margin-top: 40px;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				align-content: space-between;
+				flex-flow: row;
+				li {
+					&:not(:first-child) {
+						margin-left: 0.5vw;
+					}
+					img {
+						@include img();
+					}
+				}
+			}
+		}
+	}
+}

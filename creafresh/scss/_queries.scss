@@ -1,0 +1,263 @@
+@import "_mixins";
+@import '_variables';
+
+
+@media screen and (min-width: 1500px) {
+
+}
+@media screen and (max-width: 1200px) {
+	/* main */ 
+	main {
+		article {
+			div {
+				&.slogan {
+					position: relative;
+					flex-flow: row;
+					div {
+						display: -webkit-flex;
+						display: -moz-flex;
+						display: -ms-flex;
+						display: -o-flex;
+						display: flex;
+						&:nth-child(1) {
+							flex-grow: 2;	
+						}
+						&:nth-child(2) {
+							flex-grow: 1;
+							flex-shrink: 2;
+						}
+					}
+					h3 {
+						font-size: 50px;
+						line-height: 58px;
+					}
+					p {
+						font-size: 31px;	
+						line-height: 38px;
+					}
+				}
+			}
+			&.adv {
+				.row {
+					img {
+						@include img(100%, auto);
+						&:not(:first-child) {
+							margin-left: 0.5vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 950px) {
+	/* header */
+	header {
+		height: 120px;
+		padding-top: 55px;
+	}
+	/* main */ 
+	main {
+		padding-top: 120px;
+		article {
+			div {
+				&.slogan {
+					position: relative;
+					flex-flow: row;
+					div {
+						display: -webkit-flex;
+						display: -moz-flex;
+						display: -ms-flex;
+						display: -o-flex;
+						display: flex;
+						&:nth-child(1) {
+							flex-grow: 2;	
+						}
+						&:nth-child(2) {
+							flex-grow: 1;
+							flex-shrink: 2;
+						}
+					}
+					h3 {
+						font-size: 40px;
+						line-height: 38px;
+					}
+					p {
+						font-size: 25px;	
+						line-height: 28px;
+					}
+				}
+			}
+			&.adv {
+				.row {
+					flex-direction: column;
+					img {
+						@include img(100%, auto);
+						&:not(:first-child) {
+							margin-top: 0.5vh;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 620px) {
+	header {
+		height: 74px;
+		padding-top: 10px;
+		.logo {
+			padding-left: 10px;
+			.text-logo {
+				display: none;
+			}
+		}
+		.nav {
+			padding-right: 10px;
+			height: 50px;
+			&.opened {
+				height: auto;
+				padding-bottom: 20px;
+			}
+			&>a {
+				right: 10px;
+				top: 15px;
+			}
+			.menu {
+				margin-top: 7vh;
+
+				li {
+					a {
+						font-size: 30px;
+						line-height: 38px;
+					}
+				}
+			}
+			.language {
+				top: 80%; left: 50%;
+				margin-left: -50px;
+				width: 100px;
+				li {
+					width: 45px;
+					&+li {
+						margin-left: 10px;
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+	/* main */ 
+	main {
+		padding-top: 74px;
+		article {
+			div {
+				&.slogan {
+					position: relative;
+					h3 {
+						font-size: 35px;
+						line-height: 38px;
+					}
+					p {
+						font-size: 20px;	
+						line-height: 28px;
+					}
+					div {
+						z-index: 30;
+						&:nth-child(2) {
+							position: absolute;
+							top: 10px; right: -22px;
+							width: 137px;
+							z-index: 15;
+						}
+					}	
+				}
+				
+			}
+			&.adv {
+				.row {
+					flex-direction: column;
+					img {
+						@include img(100%, auto);
+					}
+				}
+			}
+			&.portfolio {
+				text-align: center;
+				padding-bottom: 100px;
+				.signature {
+					font-family: 'Roboto', sans-serif;
+					font-size: 15px;
+					line-height: 60px;
+					text-transform: uppercase;
+					span {
+						color: #c536a5;
+					}
+				}
+				.gallery {
+					margin-top: 40px;
+					display: -webkit-flex;
+					display: -moz-flex;
+					display: -ms-flex;
+					display: -o-flex;
+					display: flex;
+					align-content: space-between;
+					flex-flow: row wrap;
+					li {
+						width: 49%;
+						&:not(:even) {
+							margin-left: 2%;
+						}
+						&:nth-child(1) {
+							order: 3;
+						}
+						&:nth-child(2) {
+							order: 4;
+						}
+						&:nth-child(3) {
+							order: 1;
+						}
+						&:nth-child(4) {
+							display: none;
+						}
+						&:nth-child(5) {
+							order: 2;
+						}
+						
+						img {
+							@include img();
+						}
+					}
+				}
+			}
+		}
+	}
+	/* footer */
+	footer {
+		padding-bottom: 30px;
+		p {
+			text-align: center;
+			&.contact-info {
+				width: 100%;
+			}
+		}
+		div {
+			width: 100%;
+			text-align: center;
+			.socials {
+				width: 100%;
+				margin-top: 20px;
+				li {
+					width: 25%;
+					margin-left: 24.5%;
+					&:nth-child(2) {
+						margin-right: 24.5%;
+					}
+					&+li {
+						margin-left: 1%;
+					}
+				}
+			}
+		}
+	}
+}
