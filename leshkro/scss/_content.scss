@@ -1,0 +1,88 @@
+@import "_mixins";
+@import '_variables';
+
+main {
+	position: relative;
+
+	.backToTop {
+		display: none;
+		position: fixed;
+		bottom: 10vh;
+		left: 90vw;
+		z-index: 98;
+		width: 8px;
+		color: $text-color;
+		font-size: 16px;
+		text-transform: uppercase;
+		opacity: .5;
+		padding: 20px;
+		&:hover {
+			transition: opacity .4s, ease-n-out;
+			opacity: 1;
+		}
+		&:after {
+			display: block;
+			opacity: 1;
+			content: '';
+			bottom: 0;
+			left: 8px;
+			position: absolute;
+			width: 30px;
+			height: 16px;
+			background: url('../img/backToTop.png') no-repeat;
+
+		}
+	}
+	#menu	{
+		position: fixed;
+		z-index: 99;
+		top: 40vh;
+		left: 10vw;
+		width: 24px;
+		li {
+			width: 100%;
+			height: 3px;
+			margin-bottom: 20px;
+			text-align: center;
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				width: 21px;
+				height: 2px;
+				background-color: #c1c1c3;
+				&:hover {
+					width: 24px;
+					height: 3px;
+					background: linear-gradient(20deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+  				-webkit-background: linear-gradient(20deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+				}
+			}
+			&.active {
+				a {
+					width: 24px;
+					height: 3px;
+					background: linear-gradient(20deg, #3ac7ab 33%, #05866f 66%, #d23ed7);
+  				-webkit-background: linear-gradient(20deg, #3ac7ab 33%, #05866f 66%, #d23ed7);
+				}
+			}
+		}
+	}
+	figure {
+		width: 100%;
+		max-width: 1110px;
+		height: 100%;
+		margin: 0 auto;
+		img {
+			@include img();
+		}
+	}
+	>section {
+		background: url('../img/bg-gradient.png') no-repeat 0 100% / 100%;
+		width: 100%;
+		&.no-bg {
+			background-image: none;
+		}
+	}
+			
+}
