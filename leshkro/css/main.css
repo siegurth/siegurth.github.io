@@ -126,12 +126,14 @@ ul {
   font-weight: 600;
   font-style: normal; }
 
+/* reset */
+/* main variables */
 html, body {
   width: 100%;
   height: 100%; }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Myriad Pro';
   font-size: 14px;
   color: #4c4e53;
   background-color: #fff;
@@ -201,6 +203,10 @@ header {
       float: right; }
     header section .box {
       padding-left: 35px; }
+      header section .box.address {
+        background: url("../img/icon_location.png") no-repeat 0 50%; }
+      header section .box.contactUs {
+        background: url("../img/icon_cellular.png") no-repeat 0 50%; }
       header section .box p {
         font-size: 16px;
         font-weight: 600;
@@ -222,6 +228,20 @@ header {
 
 /* reset */
 /* main variables */
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url("../fonts/MyriadPro-Regular.eot");
+  src: local("Myriad Pro Regular"), local("MyriadPro-Regular"), url("../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url("../fonts/MyriadPro-Semibold.eot");
+  src: local("Myriad Pro Semibold"), local("MyriadPro-Semibold"), url("../fonts/MyriadPro-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro-Semibold.woff") format("woff"), url("../fonts/MyriadPro-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
 main {
   position: relative; }
   main .backToTop {
@@ -232,9 +252,10 @@ main {
     z-index: 98;
     width: 8px;
     color: #4c4e53;
-    font-size: 16px;
+    font-size: 14px;
+    font-family: 'Myriad Pro', sans-serif;
     text-transform: uppercase;
-    opacity: .5;
+    opacity: .3;
     padding: 20px; }
     main .backToTop:hover {
       -webkit-transition: opacity .4s, ease-n-out;
@@ -285,6 +306,7 @@ main {
     width: 100%;
     max-width: 1110px;
     height: 100%;
+    max-height: 510px;
     margin: 0 auto; }
     main figure img {
       width: 100%;
@@ -296,99 +318,70 @@ main {
     width: 100%; }
     main > section.no-bg {
       background-image: none; }
-
-/* reset */
-/* main variables */
-@font-face {
-  font-family: 'Myriad Pro';
-  src: url("../fonts/MyriadPro-Regular.eot");
-  src: local("Myriad Pro Regular"), local("MyriadPro-Regular"), url("../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Myriad Pro';
-  src: url("../fonts/MyriadPro-Semibold.eot");
-  src: local("Myriad Pro Semibold"), local("MyriadPro-Semibold"), url("../fonts/MyriadPro-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro-Semibold.woff") format("woff"), url("../fonts/MyriadPro-Semibold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal; }
-
-footer {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 338px;
-  min-height: 338px;
-  color: #4c4e53;
-  text-transform: uppercase;
-  font-family: 'Myriad Pro';
-  padding-top: 80px; }
-  footer section {
+  main .footer {
+    height: 338px;
+    min-height: 338px;
+    color: #4c4e53;
+    text-transform: uppercase;
+    font-family: 'Myriad Pro';
+    padding-top: 80px;
     width: 1100px;
-    height: 338px; }
-    footer section > p {
+    margin: 0 auto; }
+    main .footer > p {
       float: left;
       width: 100%;
       text-align: center;
       margin-top: 56px; }
-    footer section .column {
+    main .footer article {
+      float: left;
+      width: 100%; }
+    main .footer .column {
       width: 25%;
       float: left; }
-      footer section .column h4 {
+      main .footer .column h4 {
         font-size: 16px;
         padding-bottom: 20px;
         font-weight: 600; }
-      footer section .column form {
+      main .footer .column form {
         float: left;
         width: 100%; }
-        footer section .column form input {
+        main .footer .column form input {
           float: left;
           height: 39px;
           border: 1px solid #4c4e53; }
-          footer section .column form input.send {
+          main .footer .column form input.send {
             width: 15%;
             cursor: pointer;
             position: relative;
             z-index: 2;
             background: #4c4e53 url("../img/bg-submit.png") no-repeat 50% 50%/16px 12px;
             text-indent: -9999px; }
-        footer section .column form input[type=email] {
+        main .footer .column form input[type=email] {
           width: 85%;
           padding: 10px;
           color: #4c4e53; }
-      footer section .column p {
+      main .footer .column p {
         font-size: 14px;
         line-height: 20px;
         font-weight: 400; }
-      footer section .column ul {
+      main .footer .column ul {
         float: left;
         margin-top: 10px; }
-        footer section .column ul li {
+        main .footer .column ul li {
           width: 27px;
           height: 28px;
           float: left;
           background-image: url("../img/icons_footer.png");
           background-repeat: no-repeat; }
-          footer section .column ul li:nth-child(1) {
+          main .footer .column ul li:nth-child(1) {
             background-position: 0 0; }
-          footer section .column ul li:nth-child(2) {
+          main .footer .column ul li:nth-child(2) {
             background-position: -37px 0; }
-          footer section .column ul li:nth-child(3) {
+          main .footer .column ul li:nth-child(3) {
             background-position: -74px 0; }
-          footer section .column ul li:nth-child(4) {
+          main .footer .column ul li:nth-child(4) {
             background-position: -111px 0; }
-          footer section .column ul li + li {
+          main .footer .column ul li + li {
             margin-left: 10px; }
 
 /* reset */
@@ -398,21 +391,21 @@ footer {
     padding: 20px 30px 0; } }
 
 @media screen and (max-width: 980px) {
-  footer {
+  .footer {
     height: auto;
     padding-top: 60px; }
-    footer section {
+    .footer section {
       width: 100%; }
-      footer section .column {
+      .footer section .column {
         width: 50%;
         padding-bottom: 20px; } }
 
 @media screen and (max-width: 620px) {
-  footer {
+  .footer {
     height: auto;
     padding-top: 30px; }
-    footer section {
+    .footer section {
       width: 100%; }
-      footer section .column {
+      .footer section .column {
         width: 100%;
         padding-bottom: 20px; } }

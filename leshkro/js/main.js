@@ -2,7 +2,7 @@
 $(document).ready(function(){
 	var wHeight = $(window).height();
 
-	$('main section:not(:last-child)').height(wHeight);
+	$('main > section').height(wHeight);
 
 	$('.backToTop').click(function(e) {  
 		e.preventDefault();
@@ -25,7 +25,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 		top = $(id).offset().top;
-		$('body,html').animate({scrollTop: top}, 1500);
+		$('body,html').animate({scrollTop: top}, 750);
 	});
 
 	$("#menu").on("click","a", function (event) {

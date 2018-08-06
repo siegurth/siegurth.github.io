@@ -45,6 +45,12 @@ header {
 		}
 		.box {
 			padding-left: 35px;
+			&.address {
+				background: url('../img/icon_location.png') no-repeat 0 50%;
+			}
+			&.contactUs {
+				background: url('../img/icon_cellular.png') no-repeat 0 50%;	
+			}
 			p {
 				font-size: 16px;
 				font-weight: 600;
