@@ -182,49 +182,220 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   height: 400px;
-  text-transform: uppercase; }
-  header.scrolled {
-    height: 75px; }
+  text-transform: uppercase;
+  -webkit-transition: height 0.3s, ease-in-out;
+  -o-transition: height 0.3s, ease-in-out;
+  transition: height 0.3s, ease-in-out;
+  background-color: #fff; }
   header section {
     width: 100%;
+    -webkit-transition: padding 0.3s, ease-in-out;
+    -o-transition: padding 0.3s, ease-in-out;
+    transition: padding 0.3s, ease-in-out;
     padding: 48px 100px 0; }
-    header section .row div.logoBox {
-      width: 270px;
-      margin: 0 auto; }
-      header section .row div.logoBox h1 {
-        text-indent: -9999px; }
-        header section .row div.logoBox h1 a {
-          display: block;
+    header section .row {
+      position: relative;
+      float: left;
+      width: 100%; }
+      header section .row div.logoBox {
+        width: 270px;
+        -webkit-transition: width 0.3s, ease-in-out;
+        -o-transition: width 0.3s, ease-in-out;
+        transition: width 0.3s, ease-in-out;
+        margin: 0 auto; }
+        header section .row div.logoBox h1 {
+          text-indent: -9999px;
           width: 100%;
-          height: 100%; }
-    header section .row div:nth-child(1) {
-      float: left; }
-    header section .row div:nth-child(3) {
-      float: right; }
-    header section .box {
-      padding-left: 35px; }
-      header section .box.address {
-        background: url("../img/icon_location.png") no-repeat 0 50%; }
-      header section .box.contactUs {
-        background: url("../img/icon_cellular.png") no-repeat 0 50%; }
-      header section .box p {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 18px; }
-      header section .box a {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 18px;
-        text-decoration: underline;
-        background: -o-linear-gradient(70deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
-        background: linear-gradient(20deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
-        -webkit-background: -webkit-linear-gradient(70deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: #0B2349;
-        display: table; }
-        header section .box a:hover {
-          text-decoration: none; }
+          height: 238px;
+          -webkit-transition: height width 0.3s, ease-in-out;
+          -o-transition: height width 0.3s, ease-in-out;
+          transition: height width 0.3s, ease-in-out;
+          background: url("../img/logo-full.png") no-repeat; }
+          header section .row div.logoBox h1 a {
+            display: block;
+            width: 100%;
+            height: 100%; }
+      header section .row div.box {
+        padding-left: 35px;
+        position: absolute;
+        top: 0;
+        opacity: 0; }
+        header section .row div.box.address {
+          background: url("../img/icon_location.png") no-repeat 0 50%; }
+        header section .row div.box.contactUs {
+          background: url("../img/icon_cellular.png") no-repeat 0 50%; }
+        header section .row div.box p {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 18px; }
+        header section .row div.box a {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+          text-decoration: underline;
+          background: -o-linear-gradient(70deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+          background: linear-gradient(20deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+          -webkit-background: -webkit-linear-gradient(70deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: #0B2349;
+          display: table; }
+          header section .row div.box a:hover {
+            text-decoration: none; }
+      header section .row div:nth-child(1) {
+        left: 0; }
+      header section .row div:nth-child(3) {
+        right: 0; }
+    header section nav {
+      width: 100%;
+      float: left;
+      position: relative;
+      z-index: 5;
+      padding-top: 55px;
+      opacity: 0;
+      margin: 0; }
+      header section nav > ul {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+                align-content: center; }
+        header section nav > ul > li {
+          padding: 0 10px;
+          position: relative; }
+          header section nav > ul > li a {
+            font-family: 'Myriad Pro';
+            font-size: 14px;
+            color: #4c4e53; }
+            header section nav > ul > li a:hover {
+              background: -o-linear-gradient(70deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+              background: linear-gradient(20deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+              -webkit-background: -webkit-linear-gradient(70deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              color: #0B2349;
+              display: table; }
+          header section nav > ul > li .sub {
+            width: 100%;
+            height: 75px;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            display: none;
+            -webkit-align-content: center;
+                -ms-flex-line-pack: center;
+                    align-content: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-shadow: 2px 0px 6px #4c4e53;
+                    box-shadow: 2px 0px 6px #4c4e53; }
+            header section nav > ul > li .sub li {
+              padding: 0 10px;
+              position: relative; }
+          header section nav > ul > li:hover .sub {
+            display: block; }
+          header section nav > ul > li.active a {
+            background: -o-linear-gradient(70deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+            background: linear-gradient(20deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+            -webkit-background: -webkit-linear-gradient(70deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #0B2349;
+            display: table; }
+          header section nav > ul > li.logosmall {
+            display: none; }
+  header.scrolled {
+    -webkit-transition: height 0.3s, ease-in-out;
+    -o-transition: height 0.3s, ease-in-out;
+    transition: height 0.3s, ease-in-out;
+    height: 75px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    border-bottom: 1px solid #e4e5e5; }
+    header.scrolled section {
+      -webkit-transition: padding 0.3s, ease-in-out;
+      -o-transition: padding 0.3s, ease-in-out;
+      transition: padding 0.3s, ease-in-out;
+      padding: 18px 30px 0; }
+      header.scrolled section .row {
+        position: relative; }
+        header.scrolled section .row div.logoBox {
+          display: none; }
+      header.scrolled section nav {
+        padding-top: 0;
+        margin: 0 151px 0 253px; }
+        header.scrolled section nav ul {
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          header.scrolled section nav ul li {
+            padding-bottom: 20px;
+            position: relative;
+            float: left; }
+            header.scrolled section nav ul li + li {
+              margin-left: 1.6vw; }
+            header.scrolled section nav ul li:after {
+              content: '';
+              display: block;
+              width: 100%;
+              height: 1px;
+              background: -o-linear-gradient(70deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+              background: linear-gradient(20deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+              -webkit-background: -webkit-linear-gradient(290deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+              -webkit-background: -o-linear-gradient(290deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+              -webkit-background: -webkit-linear-gradient(70deg, #3ac7ab 33%, #05866f 46%, #d23ed7);
+              opacity: 0;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              z-index: 12; }
+            header.scrolled section nav ul li:hover:after {
+              opacity: 1; }
+            header.scrolled section nav ul li.active:after {
+              opacity: 1; }
+            header.scrolled section nav ul li.logosmall {
+              display: block;
+              width: 82px;
+              -webkit-transition: width 0.3s, ease-in-out;
+              -o-transition: width 0.3s, ease-in-out;
+              transition: width 0.3s, ease-in-out;
+              margin-top: -10px;
+              padding: 0; }
+              header.scrolled section nav ul li.logosmall h2 {
+                width: 100%;
+                height: 62px;
+                text-indent: -9999px;
+                -webkit-transition: height width 0.3s, ease-in-out;
+                -o-transition: height width 0.3s, ease-in-out;
+                transition: height width 0.3s, ease-in-out;
+                background: url("../img/logo-small.png") no-repeat; }
+                header.scrolled section nav ul li.logosmall h2 a {
+                  display: block;
+                  width: 100%;
+                  height: 100%; }
+              header.scrolled section nav ul li.logosmall:after {
+                display: none; }
 
 /* reset */
 /* main variables */
@@ -248,7 +419,7 @@ main {
     display: none;
     position: fixed;
     bottom: 10vh;
-    left: 90vw;
+    right: 100px;
     z-index: 98;
     width: 8px;
     color: #4c4e53;
@@ -276,7 +447,7 @@ main {
     position: fixed;
     z-index: 99;
     top: 40vh;
-    left: 10vw;
+    left: 100px;
     width: 24px; }
     main #menu li {
       width: 100%;
@@ -302,22 +473,66 @@ main {
         background: -o-linear-gradient(70deg, #3ac7ab 33%, #05866f 66%, #d23ed7);
         background: linear-gradient(20deg, #3ac7ab 33%, #05866f 66%, #d23ed7);
         -webkit-background: -webkit-linear-gradient(70deg, #3ac7ab 33%, #05866f 66%, #d23ed7); }
+  main .socialsFixed {
+    position: fixed;
+    z-index: 99;
+    top: 40vh;
+    right: 100px;
+    width: 33px; }
+    main .socialsFixed li {
+      display: block;
+      width: 33px;
+      height: 34px; }
+      main .socialsFixed li + li {
+        margin-top: 10px; }
+      main .socialsFixed li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/icons_socials.png");
+        background-repeat: no-repeat; }
+        main .socialsFixed li a.fbook {
+          background-position: 0 0; }
+          main .socialsFixed li a.fbook:hover {
+            background-position: 0 -43px; }
+        main .socialsFixed li a.ytube {
+          background-position: 0 -175px; }
+          main .socialsFixed li a.ytube:hover {
+            background-position: 0 -222px; }
+        main .socialsFixed li a.igram {
+          background-position: 0 -86px; }
+          main .socialsFixed li a.igram:hover {
+            background-position: 0 -130px; }
   main figure {
     width: 100%;
     max-width: 1110px;
     height: 100%;
     max-height: 510px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    opacity: 0; }
     main figure img {
       width: 100%;
       height: auto;
       display: inline-block;
       border: none; }
   main > section {
-    background: url("../img/bg-gradient.png") no-repeat 0 100%/100%;
+    position: relative;
     width: 100%; }
-    main > section.no-bg {
-      background-image: none; }
+    main > section:nth-child(odd) {
+      background-color: #f6f6f6; }
+    main > section .bg_grad {
+      background: url("../img/bg-gradient.png") no-repeat 0 100%/100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 60;
+      width: 100%;
+      height: 151px; }
+      main > section .bg_grad.top {
+        top: 0;
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg); }
   main .footer {
     height: 338px;
     min-height: 338px;
@@ -337,7 +552,8 @@ main {
       width: 100%; }
     main .footer .column {
       width: 25%;
-      float: left; }
+      float: left;
+      opacity: 0; }
       main .footer .column h4 {
         font-size: 16px;
         padding-bottom: 20px;

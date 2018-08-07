@@ -29,9 +29,11 @@
 
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 	<script src="js/main.js"></script>
+	<!--script src="js/in_view.js"></script-->
+	<script src="js/detectSlide.js"></script>
 </head>
 <body>
-	<header class=''>
+	<header id="header" class=''>
 		<section>
 			<div class="row">
 				<div class="box address">
@@ -49,9 +51,18 @@
 			<nav>
 				<ul>
 					<li><a href="#">главная</a></li>
-					<li><a href="#">о нас</a></li>
+					<li><a href="#">о нас</a>
+						<ul class="sub">
+							<li><a href="#">история школы</a></li>
+							<li><a href="#">наши тренера</a></li>
+							<li><a href="#">шоу-группа</a></li>
+							<li><a href="#">стили танцев</a></li>
+							<li><a href="#">танцевальные залы</a></li>
+						</ul>
+					</li>
 					<li><a href="#">расписание</a></li>
 					<li><a href="#">жизнь школы</a></li>
+					<li class='logosmall'><h2><a href="#">leshkrobtak</a></h2></li>
 					<li><a href="#">события</a></li>
 					<li><a href="#">услуги</a></li>
 					<li><a href="#">для детей</a></li>
@@ -62,24 +73,43 @@
 	</header>
 	<main>
 		<ul id="menu">
-			<li class="active"><a href="#slide_1"></a></li>
-			<li><a href="#slide_2"></a></li>
-			<li><a href="#slide_3"></a></li>
-			<li><a href="#slide_4"></a></li>
-			<li><a href="#slide_5"></a></li>
-			<li><a href="#slide_6"></a></li>
-			<li><a href="#slide_7"></a></li>
-			<li><a href="#slide_8"></a></li>
+			<li class="check-slide_1 active"><a href="#slide_1"></a></li>
+			<li class="check-slide_2"><a href="#slide_2"></a></li>
+			<li class="check-slide_3"><a href="#slide_3"></a></li>
+			<li class="check-slide_4"><a href="#slide_4"></a></li>
+			<li class="check-slide_5"><a href="#slide_5"></a></li>
+			<li class="check-slide_6"><a href="#slide_6"></a></li>
+			<li class="check-slide_7"><a href="#slide_7"></a></li>
+			<li class="check-slide_8"><a href="#slide_8"></a></li>
 		</ul>
 		<a href="#" class="backToTop">в в е р х </a>
-		<section id='slide_1'></section>
-		<section id='slide_2'></section>
-		<section id='slide_3'></section>
-		<section id='slide_4'></section>
-		<section id='slide_5'></section>
-		<section id='slide_6'></section>
-		<section id='slide_7'></section>
-		<section id='slide_8' class="no-bg">
+		<ul class="socialsFixed">
+			<li><a class="fbook" href="http://facebook.com"></a></li>
+			<li><a class="ytube" href="http://youtube.com"></a></li>
+			<li><a class="igram" href="http://instagram.com"></a></li>
+		</ul>
+		<section class="slidePage" id='slide_1'>
+			<div class="bg_grad top">&nbsp;</div>
+		</section>
+		<section class="slidePage" id='slide_2'>
+			<div class="bg_grad">&nbsp;</div>
+		</section>
+		<section class="slidePage" id='slide_3'>
+			<div class="bg_grad">&nbsp;</div>
+		</section>
+		<section class="slidePage" id='slide_4'>
+			<div class="bg_grad">&nbsp;</div>
+		</section>
+		<section class="slidePage" id='slide_5'>
+			<div class="bg_grad">&nbsp;</div>
+		</section>
+		<section class="slidePage" id='slide_6'>
+			<div class="bg_grad">&nbsp;</div>
+		</section>
+		<section class="slidePage" id='slide_7'>
+			<div class="bg_grad">&nbsp;</div>
+		</section>
+		<section class="slidePage" id='slide_8' class="no-bg">
 			<figure id="map"><img src="img/map.png" alt="location"></figure>
 			<section class="footer">
 				<article>
@@ -121,4 +151,16 @@
 		</section>
 	</main>
 </body>
+<script>
+	window.onscroll = function() {myFunction()};
+	var header = document.getElementById("header");
+	var sticky = header.offsetTop;
+	function myFunction() {
+  	if (window.pageYOffset > sticky) {
+    	header.classList.add("scrolled");
+  	} else {
+    	header.classList.remove("scrolled");
+  	}
+	} 
+</script>
 </html>
